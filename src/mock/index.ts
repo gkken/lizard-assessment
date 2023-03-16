@@ -2,12 +2,15 @@ import { createServer } from 'miragejs';
 
 import data from './data.json';
 
-createServer({
-  routes() {
-    this.namespace = 'api';
+export function makeServer({ environment = 'test' }: { environment: string }) {
+  return createServer({
+    environment,
+    routes() {
+      this.namespace = 'api';
 
-    this.get('/posts', () => {
-      return data;
-    });
-  },
-});
+      this.get('/posts', () => {
+        return data;
+      });
+    },
+  });
+}

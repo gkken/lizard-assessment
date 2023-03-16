@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 
 /**
  * This file can be ignored, please work in ./components/App.jsx
@@ -11,9 +10,10 @@ import './mock';
 
 // Include styles.
 import './styles/index.css';
+import './index.css';
 
 // Include application component.
-import App from './components/App';
+import App from 'App';
 
 ReactDOM.render(
   <React.StrictMode>
