@@ -1,5 +1,9 @@
 # Lizard Global React Developer Assessment
 
+## Live Demo
+
+Try it out here: https://gkken.github.io/lizard-assessment/
+
 ## Overview
 
 The purpose of this assessment is to demonstrate:
