@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { makeServer } from './mock';
 
 /**
  * This file can be ignored, please work in ./components/App.jsx
@@ -14,7 +15,7 @@ import './index.css';
 
 // Include application component.
 import App from 'App';
-
+makeServer({ environment: 'development' });
 ReactDOM.render(
   <React.StrictMode>
     <App />

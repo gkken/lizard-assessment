@@ -18,7 +18,7 @@ export const useFetchData = (endpoint: string) => {
       });
 
     return () => ac.abort();
-  }, [setData]);
+  }, [setData, endpoint]);
 
   return { data };
 };
