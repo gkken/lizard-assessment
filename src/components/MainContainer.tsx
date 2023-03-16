@@ -24,11 +24,15 @@ export interface ICategories {
 }
 
 const MainContainer = () => {
+  // fetch data
   const { data } = useFetchData('/api/posts');
+  // dynamically generate categories to be used for filtering
   const { filterOption } = useGenerateUniqueCategories({ data });
+  // filtering data based on whether filter is applied
   const { filteredData, setFilteredData, setSelectedCategory } = useFilterData({
     data,
   });
+  // split filtered data into pages
   const { setPageData, setPostOffset, pageData } = usePagination({
     filteredData,
   });
@@ -52,16 +56,16 @@ const MainContainer = () => {
           handleChange={handleChange}
         />
         {!!pageData &&
-          pageData.map((obj: IData) => {
+          pageData.map((data: IData) => {
             return (
               <Post
-                key={obj.id}
-                authorName={obj.author.name}
-                authorAvatar={obj.author.avatar}
-                title={obj.title}
-                summary={obj.summary}
-                publishDate={obj.publishDate}
-                categories={obj.categories}
+                key={data.id}
+                authorName={data.author.name}
+                authorAvatar={data.author.avatar}
+                title={data.title}
+                summary={data.summary}
+                publishDate={data.publishDate}
+                categories={data.categories}
               />
             );
           })}
