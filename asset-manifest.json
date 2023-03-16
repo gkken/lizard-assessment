@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/lizard-assessment/static/css/main.c4f0540e.css",
+    "main.js": "/lizard-assessment/static/js/main.b9769886.js",
+    "index.html": "/lizard-assessment/index.html",
+    "main.c4f0540e.css.map": "/lizard-assessment/static/css/main.c4f0540e.css.map",
+    "main.b9769886.js.map": "/lizard-assessment/static/js/main.b9769886.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c4f0540e.css",
+    "static/js/main.b9769886.js"
+  ]
+}
