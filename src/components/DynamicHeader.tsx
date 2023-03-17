@@ -29,7 +29,7 @@ const DynamicHeader = () => {
     return () => window.addEventListener('scroll', handleScroll);
   }, [hasShrunk]);
   return (
-    <header className="sticky -top-[100px] z-10 flex h-[150px] w-full grow flex-col justify-center bg-cyan-400">
+    <header className="sticky -top-[100px] z-10 flex h-[150px] w-full grow flex-col justify-center bg-gradient-to-r from-green-400 to-blue-500">
       <div className="sticky top-0 flex h-[50px] flex-row justify-center">
         <h1
           className={`w-11/12 self-center truncate font-bold capitalize transition-all lg:overflow-visible ${
