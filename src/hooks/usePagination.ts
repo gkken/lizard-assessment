@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
-import type { IData } from 'components/MainContainer';
+import type { Data } from 'components/MainContainer';
 
-export const usePagination = ({ filteredData }: { filteredData: IData[] }) => {
+export const usePagination = ({ filteredData }: { filteredData: Data[] }) => {
   const [postOffset, setPostOffset] = useState(0);
-  const [pageData, setPageData] = useState<IData[]>([]);
+  const [pageData, setPageData] = useState<Data[]>([]);
 
   useEffect(() => {
-    const postsPerPage = 5;
-    const endOffset = postOffset + postsPerPage;
+    const POSTS_PER_PAGE = 5;
+    const endOffset = postOffset + POSTS_PER_PAGE;
     setPageData((previousState) => {
       return [...previousState, ...filteredData.slice(postOffset, endOffset)];
     });

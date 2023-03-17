@@ -1,14 +1,14 @@
-import type { IData, ICategories } from 'components/MainContainer';
+import type { Data, Category } from 'components/MainContainer';
 import { useState, useEffect } from 'react';
 import { removeDuplicateCategories } from 'utils/removeDuplicateCategories';
 
-export const useGenerateUniqueCategories = ({ data }: { data: IData[] }) => {
-  const [filterOption, setFilterOption] = useState<ICategories[]>([]);
+export const useGenerateUniqueCategories = ({ data }: { data: Data[] }) => {
+  const [filterOption, setFilterOption] = useState<Category[]>([]);
 
   useEffect(() => {
-    const allCategories = data.flatMap((post: IData) => post.categories);
+    const allCategories = data.flatMap((post: Data) => post.categories);
     const uniqueCategories = removeDuplicateCategories(allCategories);
-    setFilterOption(uniqueCategories as ICategories[]);
+    setFilterOption(uniqueCategories as Category[]);
   }, [setFilterOption, data]);
 
   return { filterOption };

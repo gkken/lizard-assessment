@@ -1,4 +1,4 @@
-import type { ICategories } from './MainContainer';
+import type { Category } from './MainContainer';
 import dayjs from 'dayjs';
 import CategoryFlag from './CategoryFlag';
 import { removeDuplicateCategories } from 'utils/removeDuplicateCategories';
@@ -9,7 +9,7 @@ export interface PostProps {
   title: string;
   authorName: string;
   authorAvatar: string;
-  categories: ICategories[];
+  categories: Category[];
 }
 
 const Post = ({

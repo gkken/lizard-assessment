@@ -1,6 +1,6 @@
-import type { ICategories } from './MainContainer';
+import type { Category } from './MainContainer';
 export interface FilterSelectProps {
-  filterOptions: ICategories[];
+  filterOptions: Category[];
   handleChange: React.ChangeEventHandler<HTMLSelectElement>;
 }
 const FilterSelect = ({ filterOptions, handleChange }: FilterSelectProps) => {

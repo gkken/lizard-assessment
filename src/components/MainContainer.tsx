@@ -6,7 +6,7 @@ import { usePagination } from 'hooks/usePagination';
 import { useGenerateUniqueCategories } from 'hooks/useGenerateUniqueCategories';
 import LoadMore from './LoadMore';
 
-export interface IData {
+export interface Data {
   id: string;
   publishDate: string;
   summary: string;
@@ -15,10 +15,10 @@ export interface IData {
     avatar: string;
     name: string;
   };
-  categories: ICategories[];
+  categories: Category[];
 }
 
-export interface ICategories {
+export interface Category {
   id: string;
   name: string;
 }
@@ -45,7 +45,8 @@ const MainContainer = () => {
   };
 
   const handleLoadMore = () => {
-    setPostOffset((previousState) => previousState + 5);
+    const POST_PER_PAGE = 5;
+    setPostOffset((previousState) => previousState + POST_PER_PAGE);
   };
 
   return (
@@ -56,7 +57,7 @@ const MainContainer = () => {
           handleChange={handleChange}
         />
         {!!pageData &&
-          pageData.map((data: IData) => {
+          pageData.map((data: Data) => {
             return (
               <Post
                 key={data.id}

@@ -4,9 +4,9 @@ export const useFetchData = (endpoint: string) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const ac = new AbortController();
+    const aborController = new AbortController();
     fetch(endpoint, {
-      signal: ac.signal,
+      signal: aborController.signal,
     })
       .then((res) => res.json())
       .then((data) => {
@@ -17,7 +17,7 @@ export const useFetchData = (endpoint: string) => {
         throw error;
       });
 
-    return () => ac.abort();
+    return () => aborController.abort();
   }, [setData, endpoint]);
 
   return { data };

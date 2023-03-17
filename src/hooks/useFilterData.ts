@@ -1,14 +1,14 @@
-import type { IData, ICategories } from 'components/MainContainer';
+import type { Data, Category } from 'components/MainContainer';
 import { useState, useEffect } from 'react';
 
-export const useFilterData = ({ data }: { data: IData[] }) => {
+export const useFilterData = ({ data }: { data: Data[] }) => {
   const [selectedCategory, setSelectedCategory] = useState('');
-  const [filteredData, setFilteredData] = useState<IData[]>([]);
+  const [filteredData, setFilteredData] = useState<Data[]>([]);
 
   useEffect(() => {
     setFilteredData(
-      data.filter((da: IData) =>
-        da.categories.some((category: ICategories) => {
+      data.filter((da: Data) =>
+        da.categories.some((category: Category) => {
           if (!selectedCategory) return true;
           return category.name === selectedCategory;
         })
