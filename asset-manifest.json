@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/lizard-assessment/static/css/main.c4f0540e.css",
-    "main.js": "/lizard-assessment/static/js/main.b9769886.js",
+    "main.css": "/lizard-assessment/static/css/main.bd1cd7f4.css",
+    "main.js": "/lizard-assessment/static/js/main.ab4d41f6.js",
     "index.html": "/lizard-assessment/index.html",
-    "main.c4f0540e.css.map": "/lizard-assessment/static/css/main.c4f0540e.css.map",
-    "main.b9769886.js.map": "/lizard-assessment/static/js/main.b9769886.js.map"
+    "main.bd1cd7f4.css.map": "/lizard-assessment/static/css/main.bd1cd7f4.css.map",
+    "main.ab4d41f6.js.map": "/lizard-assessment/static/js/main.ab4d41f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4f0540e.css",
-    "static/js/main.b9769886.js"
+    "static/css/main.bd1cd7f4.css",
+    "static/js/main.ab4d41f6.js"
   ]
 }
